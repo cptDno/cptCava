@@ -17,13 +17,6 @@ jobs:
       with:
         to: ${{ s@CptDno }}
         token: ${{ secrets.@cptDno_ci_cd_bot }}
-        message: |
-          ${{ github.actor }} создал новый коммит: ${{ github.event.commits[0].message }}
-          Ссылка на коммит: https://github.com/${{ github.repository }}/commit/${{github.sha}}
-          Репозиторий: https://github.com/${{ github.repository }}
-            
-          CI/CD github actions: https://github.com/${{ github.repository }}/actions
-          https://github.com/${{ github.repository }}/actions/runs/${{github.run_id}}
     - name: Checkout
       uses: actions/checkout@v4
     - name: Пройти проверки HTML5 Validator
